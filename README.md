@@ -1,7 +1,7 @@
 # Cazador — the ssh-tunnel
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bashkirtsevich-llc/cazador/master/static/.logo.png">
+  <img src="https://raw.githubusercontent.com/bashkirtsevich-llc/cazador/master/.logo.png">
 </p>
 
 Cazador — is a simply ssh-tunnel for simplify connections. 
