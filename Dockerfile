@@ -8,6 +8,6 @@ EXPOSE 22
 
 COPY . .
 
-RUN pip install -r requirements
+RUN pip install -r requirements.txt
 
 CMD [ "python", "app.py" ]
