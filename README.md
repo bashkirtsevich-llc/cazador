@@ -1,5 +1,7 @@
 # Cazador — the ssh-tunnel
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d4cfd7bc6b6b435fb2c79b28f6a878a6)](https://www.codacy.com/app/bashkirtsevich/cazador?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bashkirtsevich-llc/cazador&amp;utm_campaign=Badge_Grade)
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/bashkirtsevich-llc/cazador/master/.logo.png">
 </p>
