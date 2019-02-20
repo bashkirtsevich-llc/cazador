@@ -86,7 +86,7 @@ Required `Python 3.7+`
 Or use docker
 
 1. `docker build -t cazador .`;
-2. `docker run -d -p 22:22 -e "CONFIG_PATH=/path/to/your/config.yml" -v /path/to/your/config.yml:/path/to/your/config.yml -v /path/to/your/ssh-keys:/path/to/your/ssh-keys cazador`;
+2. `docker run -d -p 22:22 -e CONFIG_PATH=/app/config.yml -v $(pwd)/config.yml:/app/config.yml:ro -v $(pwd)/ssh_host_key:/app/ssh_host_key:ro cazador`;
 
 
 # MIT-License
