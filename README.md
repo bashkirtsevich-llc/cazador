@@ -10,32 +10,30 @@ Cazador — is a simply ssh-tunnel for simplify connections.
 
 Can be used for:
 
-1. experiments on localhost or local area network;
-2. simplify access to remote ssh.
+1.	experiments on localhost or local area network;
+2.	simplify access to remote ssh.
 
 _Disclaimer_:
 > **WARNING!**
 >
 > This software provide ssh-tunneling and password storing, it can be potentially dangerous! It's not recommended for using in real systems.
 
-
 ## Config
 
 Config file — is a simply yml file with sections:
-* `config` — application parameters;
-  * `port` — server listen port (default `22`);
-  * `allow_empty_passwords` — enable users without password;
-  * `host_keys` — list of OpenSSH key-files;
-* `users` — dictionary with `user_login: "password_hash"` pairs;
-* `connections` — dictionary with ssh login credentials, each element contains next structures:
-  * `host` — IP-address or hostname of destination ssh-server;
-  * `port` — listen port of destination ssh-server (default `22`);
-  * `username` — user login;
-  * `password` — user password;
-* `commands` — dictionary with names and shell-commands lists;
-* `routes` — dictionary contains structures which provide relationship between `user` and `connection` with `command`.
+*	`config` — application parameters;
+  *	`port` — server listen port (default `22`);
+  *	`allow_empty_passwords` — enable users without password;
+  *	`host_keys` — list of OpenSSH key-files;
+*	`users` — dictionary with `user_login: "password_hash"` pairs;
+*	`connections` — dictionary with ssh login credentials, each element contains next structures:
+  *	`host` — IP-address or hostname of destination ssh-server;
+  *	`port` — listen port of destination ssh-server (default `22`);
+  *	`username` — user login;
+  *	`password` — user password;
+*	`commands` — dictionary with names and shell-commands lists;
+*	`routes` — dictionary contains structures which provide relationship between `user` and `connection` with `command`.
   
-
 ### `config.yml` example
 
 ```yaml
@@ -74,20 +72,18 @@ routes:
     connection: local
 ```
 
-
 ## Startup
 
 Required `Python 3.7+`
 
-1. `pip install -r requirements`;
-2. `exports CONFIG_PATH="/path/to/your/config.yml"`;
-3. `python app.py`.
+1.	`pip install -r requirements`;
+2.	`exports CONFIG_PATH="/path/to/your/config.yml"`;
+3.	`python app.py`.
 
 Or use docker
 
-1. `docker build -t cazador .`;
-2. `docker run -d -p 22:22 -e CONFIG_PATH=/app/config.yml -v $(pwd)/config.yml:/app/config.yml:ro -v $(pwd)/ssh_host_key:/app/ssh_host_key:ro cazador`;
-
+1.	`docker build -t cazador .`;
+2.	`docker run -d -p 22:22 -e CONFIG_PATH=/app/config.yml -v $(pwd)/config.yml:/app/config.yml:ro -v $(pwd)/ssh_host_key:/app/ssh_host_key:ro cazador`;
 
 # MIT-License
 
